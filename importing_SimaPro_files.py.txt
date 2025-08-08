@@ -1,0 +1,131 @@
+# ---
+# jupyter:
+#   jupytext:
+#     formats: py:percent,ipynb
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.17.2
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %%
+from pathlib import Path
+
+import bw2data as bd
+import bw2io as bi
+
+# %%
+bd.projects
+
+# %%
+bd.projects.set_current("ecoinvent311")
+bd.databases
+
+# %% [markdown]
+# ## Use the _real_ SimaPro importer that does all the magic
+
+# %%
+spi = bi.SimaProBlockCSVImporter(Path("bike_example_no_ei.CSV"))
+
+# %%
+# Do some well known changes to data, based on simapro standards
+spi.apply_strategies()
+
+# %%
+# Verify the status of the importer
+spi.statistics()
+
+# %% [markdown]
+# ## Matching
+
+# %% [markdown]
+# ### Match the database we are importing against itself
+
+# %%
+spi.match_database()
+
+# %%
+spi.statistics()
+
+# %% [markdown]
+# ### Match against the biosphere
+
+# %%
+spi.match_database("ecoinvent-3.11-biosphere")
+
+# %%
+spi.statistics()
+
+# %% [markdown]
+# At this point, we know there is one biosphere flow that was not automagically matched before.
+# We can print to see which flow it is
+
+# %%
+# print the unlinked flows
+# We know it's CO2
+for u in spi.unlinked:
+    print(u)
+
+# %%
+# find CO2 from the biosphere
+for flow in bd.Database("ecoinvent-3.11-biosphere"):
+    if "Carbon dioxide, fossil" in flow["name"] and flow["categories"] == ("air",):
+        print(flow.as_dict())
+        co2_flow = flow
+
+# %%
+# add as input the CO2 to the exchanges in the imported data
+for p in spi.data:
+    for e in p.get("exchanges", []):
+        if e["type"] == "biosphere":
+            e["input"] = co2_flow.key
+
+# %%
+spi.statistics()
+
+# %% [markdown]
+# Now that the importer reports no unlinked edges, we can proceed to write the database and do some first tests.
+
+# %%
+spi.write_database()
+
+# %%
+for p in bd.Database("bike_example"):
+    if p["type"] == "product" and p['name'] == 'Bike':
+        print(p)
+        print(p.key)
+        bike_p = p
+
+# %%
+import bw2calc as bc
+
+# %%
+ef_method_cc = [m for m in bd.methods if m[1] == "EF v3.1" and m[2] == "climate change"]
+ef_method_cc
+
+# %%
+functional_unit, data_objs, _ = bd.prepare_lca_inputs(
+    {bike_p: 1}, method=ef_method_cc[0],remapping=False
+)
+
+# %%
+lca = bc.LCA(demand=functional_unit, data_objs=data_objs)
+lca.lci()
+lca.lcia()
+lca.score
+
+# %%
+method = bd.Method(ef_method_cc[0])
+
+
+# %%
+cfs = method.load()
+for cf in cfs:
+    flow = bd.get_activity(cf[0])
+    if "Carbon dioxide" in flow['name']:
+        print(flow)

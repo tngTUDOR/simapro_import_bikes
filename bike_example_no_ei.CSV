@@ -1,0 +1,506 @@
+{SimaPro 9.6.0.1}
+{processes}
+{Date: 07/08/2025}
+{Time: 17:22:41}
+{Project: bike_example}
+{CSV Format version: 9.0.0}
+{CSV separator: Semicolon}
+{Decimal separator: .}
+{Date separator: /}
+{Short date format: dd/MM/yyyy}
+{Export platform IDs: No}
+{Skip empty fields: No}
+{Convert expressions to constants: No}
+{Selection: Selection (3)}
+{Related objects (system descriptions, substances, units, etc.): Yes}
+{Include sub product stages and processes: No}
+{Skip unused parameters: Yes}
+{Open project: 'bike_example'}
+{Library 'Ecoinvent 3 - allocation, cut-off by classification - unit'}
+{Library 'Methods'}
+
+Process
+
+Category type
+processing
+
+Process identifier
+HenTudor000155939400001
+
+Type
+
+
+Process name
+bike production
+
+Status
+
+
+Time period
+Unspecified
+
+Geography
+Unspecified
+
+Technology
+Unspecified
+
+Representativeness
+Unspecified
+
+Multiple output allocation
+Unspecified
+
+Substitution allocation
+Unspecified
+
+Cut off rules
+Unspecified
+
+Capital goods
+Unspecified
+
+Boundary with nature
+Unspecified
+
+Infrastructure
+No
+
+Date
+07/08/2025
+
+Record
+
+
+Generator
+
+
+External documents
+
+
+Literature references
+
+
+Collection method
+
+
+Data treatment
+
+
+Verification
+
+
+Comment
+dummy process describing a bike production
+
+Allocation rules
+
+
+System description
+;
+
+Products
+Bike;p;1;100;not defined;BIKES;
+
+Avoided products
+
+Resources
+
+Materials/fuels
+Carbon fibre;kg;2.5;Undefined;0;0;0;
+
+Electricity/heat
+
+Emissions to air
+
+Emissions to water
+
+Emissions to soil
+
+Final waste flows
+
+Non material emissions
+
+Social issues
+
+Economic issues
+
+Waste to treatment
+
+Input parameters
+
+Calculated parameters
+
+End
+
+Process
+
+Category type
+processing
+
+Process identifier
+HenTudor000155939400002
+
+Type
+
+
+Process name
+CF production
+
+Status
+
+
+Time period
+Unspecified
+
+Geography
+Unspecified
+
+Technology
+Unspecified
+
+Representativeness
+Unspecified
+
+Multiple output allocation
+Unspecified
+
+Substitution allocation
+Unspecified
+
+Cut off rules
+Unspecified
+
+Capital goods
+Unspecified
+
+Boundary with nature
+Unspecified
+
+Infrastructure
+No
+
+Date
+07/08/2025
+
+Record
+
+
+Generator
+
+
+External documents
+
+
+Literature references
+
+
+Collection method
+
+
+Data treatment
+
+
+Verification
+
+
+Comment
+dummy carbon fibre production
+
+Allocation rules
+
+
+System description
+;
+
+Products
+Carbon fibre;kg;1;100;not defined;BIKES;
+
+Avoided products
+
+Resources
+
+Materials/fuels
+Natural gas;MJ;237;Undefined;0;0;0;
+
+Electricity/heat
+
+Emissions to air
+Carbon dioxide;;kg;26.6;Undefined;0;0;0;
+
+Emissions to water
+
+Emissions to soil
+
+Final waste flows
+
+Non material emissions
+
+Social issues
+
+Economic issues
+
+Waste to treatment
+
+Input parameters
+
+Calculated parameters
+
+End
+
+Process
+
+Category type
+processing
+
+Process identifier
+HenTudor000155939400003
+
+Type
+
+
+Process name
+NG production
+
+Status
+
+
+Time period
+Unspecified
+
+Geography
+Unspecified
+
+Technology
+Unspecified
+
+Representativeness
+Unspecified
+
+Multiple output allocation
+Unspecified
+
+Substitution allocation
+Unspecified
+
+Cut off rules
+Unspecified
+
+Capital goods
+Unspecified
+
+Boundary with nature
+Unspecified
+
+Infrastructure
+No
+
+Date
+07/08/2025
+
+Record
+
+
+Generator
+
+
+External documents
+
+
+Literature references
+
+
+Collection method
+
+
+Data treatment
+
+
+Verification
+
+
+Comment
+
+
+Allocation rules
+
+
+System description
+;
+
+Products
+Natural gas;MJ;1;100;not defined;BIKES;
+
+Avoided products
+
+Resources
+
+Materials/fuels
+
+Electricity/heat
+
+Emissions to air
+
+Emissions to water
+
+Emissions to soil
+
+Final waste flows
+
+Non material emissions
+
+Social issues
+
+Economic issues
+
+Waste to treatment
+
+Input parameters
+
+Calculated parameters
+
+End
+
+Quantities
+Mass;Yes
+Amount;Yes
+Energy;Yes
+
+End
+
+
+Units
+kg;Mass;1;kg
+p;Amount;1;p
+g;Mass;0.001;kg
+kWh;Energy;3.6;MJ
+MJ;Energy;1;MJ
+ton;Mass;1000;kg
+µg;Mass;0.000000001;kg
+mg;Mass;0.000001;kg
+GJ;Energy;1000;MJ
+J;Energy;0.000001;MJ
+kJ;Energy;0.001;MJ
+Mtn;Mass;1000000000;kg
+PJ;Energy;1000000000;MJ
+TJ;Energy;1000000;MJ
+kton;Mass;1000000;kg
+ng;Mass;1.0E-12;kg
+pg;Mass;1.0E-15;kg
+MWh;Energy;3600;MJ
+lb;Mass;0.4535924;kg
+Btu;Energy;0.001055696;MJ
+oz;Mass;0.02834952;kg
+tn.sh;Mass;907.1848;kg
+tn.lg;Mass;1016.047;kg
+kcal;Energy;0.0041855;MJ
+Wh;Energy;0.0036;MJ
+t;Mass;1000;kg
+Mg;Mass;1000;kg
+cal;Energy;0.0000041855;MJ
+cases;Amount;1;p
+m3/g;Mass;1.0E-3;kg
+kWp;Energy;3.6;MJ
+Mj;Energy;1;MJ
+kg C;Mass;1;kg
+tOM;Mass;1000;kg
+tMS;Mass;1000;kg
+tMB;Mass;1000;kg
+T;Mass;1000;kg
+aaa;Mass;1;kg
+tonne;Mass;1000;kg
+Mt;Mass;1000000000;kg
+kt;Mass;1000000;kg
+‘g;Mass;0.000000001;kg
+g/m3;Mass;1;kg
+eg;Mass;0.000000001;kg
+æg;Mass;0.000000001;kg
+ktk;Mass;1000;kg
+z;Mass;0.02834952;kg
+kg-NL;Energy;42.4;MJ
+Nm3-DZ;Energy;38.5;MJ
+GWh;Energy;3600000;MJ
+Nm3-Russia;Energy;36.4;MJ
+Nm3 - Iran;Energy;38.5;MJ
+kg-NO;Energy;56.6;MJ
+Nm3 - NG;Energy;38.5;MJ
+Nm3- Europ;Energy;37.2;MJ
+TWh;Energy;3600000000;MJ
+kg-DE;Energy;45.9;MJ
+kg-RU;Energy;49.3;MJ
+Nm3 F-v6;Energy;36.894;MJ
+Nm3-Europ;Energy;37.2;MJ
+Cs;Energy;1;MJ
+Nm3Europe;Energy;37.2;MJ
+Nm3 FR;Energy;37.09;MJ
+Nm3 Europe;Energy;37.5;MJ
+Nm3-NL;Energy;34.9;MJ
+MJe;Energy;1;MJ
+NM3-Norway;Energy;40.8;MJ
+Nm3-DE;Energy;35;MJ
+Nm3 - EG;Energy;38.5;MJ
+kg-GB;Energy;47;MJ
+kg-DZ;Energy;49.7;MJ
+Nm3- Italy;Energy;33.85;MJ
+TOE;Energy;41868;MJ
+Nm3-GB;Energy;37;MJ
+hp.hr;Energy;2.68451928;MJ
+HP.Hr;Energy;2.684519537;MJ
+$;Amount;0.7;p
+€;Amount;1;p
+unit;Amount;1;p
+1000 pers;Amount;1000;p
+guestnight;Amount;1;p
+cycle;Amount;1;p
+ton*;Mass;907.1847;kg
+ton.sh;Mass;907.1848;kg
+ton.lg;Mass;1016.047;kg
+SU;Amount;1;p
+Mp;Amount;1000000;p
+mp;Amount;0.001;p
+kp;Amount;1000;p
+µp;Amount;0.000001;p
+np;Amount;0.000000001;p
+kJ (Ho);Energy;0.001;MJ
+Wash;Amount;1;p
+mmBtu;Energy;1055.696;MJ
+MMBTU;Energy;1055.696;MJ
+MJ elec;Energy;1;MJ
+Therms;Energy;105.506;MJ
+Gg;Mass;1000000;kg
+Áp;Amount;0.000001;p
+kgCOD;Mass;1;kg
+BTU;Energy;0.001055696;MJ
+eu;Mass;1;kg
+MT*;Mass;9.071847E8;kg
+5g;Mass;0.000000001;kg
+fg;Mass;0.000000001;kg
+EU;Mass;0.45454545;kg
+Unit;Amount;1;p
+Ag;Mass;0.000000001;kg
+Ág;Mass;0.000000001;kg
+
+End
+
+
+Airborne emissions
+Carbon dioxide;kg;000124-38-9;Formula: CO2
+
+End
+
+
+Database Input parameters
+
+End
+
+Database Calculated parameters
+
+End
+
+Project Input parameters
+
+End
+
+Project Calculated parameters
+
+End
